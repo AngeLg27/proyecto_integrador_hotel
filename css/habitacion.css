@@ -1,0 +1,142 @@
+:root {
+    --colorPrincipal: #3192f0;
+    --colorSecundario: #f7f9ff;
+    --colorTercer: #f8f8f8;
+    --colorCuarteto: #acacac;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img {
+    width: 100%;
+    display: block;
+    
+}
+.layout {
+    width: 100%;
+}
+
+
+.habitaciones {
+    width: 95%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    height: 100%;
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "title  title   title"
+    "c1     c2      c3"
+    ;
+
+    column-gap: 2rem;
+    padding: 2rem;
+    
+}
+.habitaciones__title {
+    
+    grid-area: title;
+    padding: 2rem;
+    font-size: 4rem;
+    
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+.card-habitacion {
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px var(--colorPrincipal);
+}
+
+.card-habitacion:nth-child(2) {
+    grid-area: c1;
+}
+.card-habitacion:nth-child(3) {
+    grid-area: c2;
+    
+}
+.card-habitacion:nth-child(4) {
+    grid-area: c3;
+    
+}
+.card-habitacion__image {
+    max-width: 300px;
+    height: 160px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: inherit;
+    box-shadow: 2px 2px 3px 1px var(--colorCuarteto);
+}
+.card-habitacion__img {
+    height: 100%;
+}
+.card-habitacion__title {
+    padding: 1rem 0;
+    text-align: center;
+}
+.card-habitacion__text {
+    height: 170px;
+    padding: 0 1.2rem 1.2rem 1.2rem;    
+}
+.btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    background-color: var(--colorPrincipal);
+    color: #fff;
+    font-weight: bold;
+    font-family: inherit;
+    border: none;
+    border-radius: .5rem;
+}
+
+.btn:hover {
+    transition: background-color, color, border, 0.3s ease-in-out;
+    background-color: #fff;
+    color: var(--colorPrincipal);
+    border: 2px solid;
+}
+.card-habitacion__precio {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--colorTercer);
+    border-radius: inherit;
+    box-shadow: 2px 2px 3px 1px var(--colorCuarteto);
+
+}
+
+@media screen and (max-width: 624px){
+    .habitaciones {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 2rem;
+        grid-template-rows: auto repeat(3, 586px);
+        grid-template-areas: 
+        "title"
+        "c1"
+        "c2"
+        "c3"
+        ;
+    }
+    .habitaciones__title {
+        font-size: 1.8rem;
+        background-color: lime;
+    }
+}

@@ -1,0 +1,119 @@
+:root {
+    --colorPrincipal: #3192f0;
+    --colorSecundario: #f7f9ff;
+    --colorTercer: #f8f8f8;
+    --colorCuarteto: #acacac;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+.form {
+    width: 90%;
+    padding: 1rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 10px var(--colorPrincipal);
+}
+.form__title, 
+.form__desc {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.form__title {
+    padding: .5rem 0;
+    color: var(--colorPrincipal);
+    font-weight: bold;
+    background-color: var(--colorTercer);
+    border-radius: inherit;
+
+}
+.form__desc {
+    font-style: italic;
+}
+
+.btn{
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: var(--colorPrincipal);
+    border: none;
+    border-radius: .5rem;
+    
+}
+.btn--disabled {
+    cursor: no-drop;
+    background-color: var(--colorCuarteto);
+}
+.btn--activar:hover,
+.btn--comprar:hover{
+    transition: background-color, color, border, 0.3s ease-in-out;
+    background-color: #fff;
+    color: var(--colorPrincipal);
+    border: 2px solid;
+}
+.btn--calcular {
+    width: 50%;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+
+.form__input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+}
+.container-ico {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--colorPrincipal);
+}
+label, label{
+    display: block;
+}
+
+.container-ico-label {
+    display: flex;
+    align-items: center;
+}
+.form__input-date {
+    display: block;
+    padding: .5rem;
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+
+.mensaje-error {
+    border: 1px solid red;
+    margin-bottom: 1rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+

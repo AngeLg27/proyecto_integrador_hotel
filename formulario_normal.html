@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="formulario_sencillo.css">
+    <link rel="shortcut icon" href="img/icono-all.ico" type="image/x-icon">
+
+    <title>
+        habitacion sencilla
+    </title>
+</head>
+
+<body>
+    <form action="#" class="form">
+
+        <h2 class="form__title">
+            Reservacion
+        </h2>
+        <p class="form__desc">
+            Disfruta tu estancia en nuestro hotel en compañia de amigos y familiares
+        </p>
+        <div class="form__input">
+            <div class="container-ico-label">
+                <div class="container-ico">
+                    <i class="fa-solid fa-chevron-right ico"></i>
+                </div>
+                <label for="fechaEntrada">Fecha Entrada:</label>
+            </div>
+            <input type="date" name="fechaEntrada" id="fechaEntrada" class="form__input-date">
+        </div>
+        <div class="form__input">
+
+            <div class="container-ico-label">
+                <div class="container-ico">
+                    <i class="fa-solid fa-chevron-left ico"></i>
+                </div>
+                <label for="fechaEntrada">Fecha Salida:</label>
+            </div>
+            
+            <input type="date" name="fechaSalida" id="fechaSalida" class="form__input-date">
+        </div>
+
+        <div class="form__input">
+            <label for="#">Precio por noche:</label>
+            <p>
+                <span>$</span><span class="span-PrecioNoche">900</span>
+            </p>
+        </div>
+        
+        <button class="btn btn--disabled btn--calcular" id="btn_calcular" disabled>
+            Calcular
+        </button>
+
+        <div class="form__input">
+            <label for="#">Dias Transcurridos:</label>
+            <p class="p-dias">
+            </p>
+        </div>
+
+        <div class="form__input" id="input-precioTotal">
+            <label for="#">Precio Total</label>
+            <p>
+                <span>$</span><span class="span-PrecioTotal">0</span>
+            </p>
+        </div>
+
+    </form>
+    <script src="formulario_sencillo.js"></script>
+</body>
+
+</html>
